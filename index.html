@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no,maximum-scale=1,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5ba0d5" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2d89ef" />
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>REMONT EDUCATION — Обучение с трудоустройством</title>
+    <link href="./assets/css/1.style.css" rel="stylesheet" />
+    <link href="./assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      class="modal fade"
+      id="callback"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="callbackLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-wrap">
+            <div class="modal-header">
+              <h5 class="modal-title" id="callbackLabel">
+                Запишитесь и получите высокооплачиваемую профессию рядом с домом
+              </h5>
+            </div>
+            <div class="modal-body">
+              <form>
+                <span><input type="hidden" name="formname" value="" /> </span
+                ><span class="form-control-wrap"
+                  ><input class="form-control" placeholder="Ваше имя" name="fullname" /> </span
+                ><span class="form-control-wrap"
+                  ><input
+                    type="tel"
+                    class="form-control mask-phone"
+                    placeholder="Ваш телефон"
+                    name="phone"
+                    required
+                  /> </span
+                ><button type="submit" class="btn btn-blue">Оставить заявку</button>
+              </form>
+              <small class="form-text"
+                >Нажимая кнопку “Оставить заявку” Вы соглашаетесь на обработку персональных данных.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="successLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-wrap">
+            <div class="modal-header">
+              <h5 class="modal-title" id="successLabel">Спасибо</h5>
+              <h6 class="modal-subtitle">Мы перезвоним вам в течение 3 минут</h6>
+            </div>
+            <div class="modal-body">
+              <button type="submit" class="btn btn-blue" data-dismiss="modal" aria-label="Close">Хорошо</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="program-washer"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="successLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-wrap">
+            <div class="program__item-row">
+              <div class="program__item-info">
+                <div class="program__item-title">Мастер ремонта стиральных и посудомоечных машин</div>
+                <div class="program__item-desc">5 рабочих дней по 7 часов в день. С 10:00 до 17:00</div>
+                <div class="program__item-hours">
+                  <div class="program__item-hours-item">
+                    <div class="program__item-hours-item-title">Теория <span class="bold">10 ч</span>.</div>
+                    <div class="program__item-hours-item-bar"></div>
+                  </div>
+                  <div class="program__item-hours-item">
+                    <div class="program__item-hours-item-title">Практика <span class="bold">20 ч</span>.</div>
+                    <div class="program__item-hours-item-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="program__item-additional">
+                <div class="program__item-days">5 <small>Дней</small></div>
+              </div>
+            </div>
+            <div class="program__features">
+              <div class="program__features-item">
+                <div class="program__features-item-icon">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 0C4.70217 0 0 4.70217 0 10.5C0 16.2978 4.70217 21 10.5 21C16.2978 21 21 16.2978 21 10.5C21 4.70217 16.2978 0 10.5 0ZM17.0054 7.9663L9.0163 15.9326C8.76522 15.9326 8.62826 15.9326 8.37717 15.9326L3.51522 11.0478C3.51522 10.7967 3.51522 10.6598 3.51522 10.4087L5.43261 8.4913C5.6837 8.4913 5.82065 8.4913 6.07174 8.4913L8.69674 11.1163L14.4261 5.38696C14.6772 5.38696 14.8141 5.38696 15.0652 5.38696L16.9826 7.30435C17.0054 7.55544 17.0054 7.71522 17.0054 7.9663Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="program__features-item-title">
+                  В программу курса включены занятия по теории, проводимые в специализированном классе в течение 7 часов
+                </div>
+              </div>
+              <div class="program__features-item">
+                <div class="program__features-item-icon">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 0C4.70217 0 0 4.70217 0 10.5C0 16.2978 4.70217 21 10.5 21C16.2978 21 21 16.2978 21 10.5C21 4.70217 16.2978 0 10.5 0ZM17.0054 7.9663L9.0163 15.9326C8.76522 15.9326 8.62826 15.9326 8.37717 15.9326L3.51522 11.0478C3.51522 10.7967 3.51522 10.6598 3.51522 10.4087L5.43261 8.4913C5.6837 8.4913 5.82065 8.4913 6.07174 8.4913L8.69674 11.1163L14.4261 5.38696C14.6772 5.38696 14.8141 5.38696 15.0652 5.38696L16.9826 7.30435C17.0054 7.55544 17.0054 7.71522 17.0054 7.9663Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="program__features-item-title">
+                  В последний день обучения вы закрепите пройденный материал и получите Свидетельство об окончании курса
+                </div>
+              </div>
+            </div>
+            <div class="program__item-row align-items-center">
+              <div class="program__item-pricing">
+                <div class="program__item-pricing-old">12 000 ₽</div>
+                <div class="program__item-pricing-economy">Экономия 7 000 ₽</div>
+                <div class="program__item-pricing-current">5 000 ₽</div>
+              </div>
+              <div class="program__item-actions">
+                <form class="form-inline">
+                  <span><input type="hidden" name="formname" value="Мастер ремонта стиральных машин" /> </span
+                  ><span class="form-control-wrap"
+                    ><input type="tel" class="form-control" name="phone" placeholder="Ваш телефон" /> </span
+                  ><button type="submit" class="btn btn-blue">Записаться на курс</button>
+                  <div class="form-text">
+                    Нажимая кнопку “Записаться на курс”, я даю согласие на обработку персональных данных
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="program-fridge"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="successLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-wrap">
+            <div class="program__item-row">
+              <div class="program__item-info">
+                <div class="program__item-title">Мастер ремонта<br />холодильников</div>
+                <div class="program__item-desc">5 рабочих дней по 7 часов в день. С 10:00 до 17:00</div>
+                <div class="program__item-hours">
+                  <div class="program__item-hours-item">
+                    <div class="program__item-hours-item-title">Теория <span class="bold">10 ч</span>.</div>
+                    <div class="program__item-hours-item-bar"></div>
+                  </div>
+                  <div class="program__item-hours-item">
+                    <div class="program__item-hours-item-title">Практика <span class="bold">20 ч</span>.</div>
+                    <div class="program__item-hours-item-bar"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="program__item-additional">
+                <div class="program__item-days">5 <small>Дней</small></div>
+              </div>
+            </div>
+            <div class="program__features">
+              <div class="program__features-item">
+                <div class="program__features-item-icon">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 0C4.70217 0 0 4.70217 0 10.5C0 16.2978 4.70217 21 10.5 21C16.2978 21 21 16.2978 21 10.5C21 4.70217 16.2978 0 10.5 0ZM17.0054 7.9663L9.0163 15.9326C8.76522 15.9326 8.62826 15.9326 8.37717 15.9326L3.51522 11.0478C3.51522 10.7967 3.51522 10.6598 3.51522 10.4087L5.43261 8.4913C5.6837 8.4913 5.82065 8.4913 6.07174 8.4913L8.69674 11.1163L14.4261 5.38696C14.6772 5.38696 14.8141 5.38696 15.0652 5.38696L16.9826 7.30435C17.0054 7.55544 17.0054 7.71522 17.0054 7.9663Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="program__features-item-title">
+                  В программу курса включены занятия по теории, проводимые в специализированном классе в течение 7 часов
+                </div>
+              </div>
+              <div class="program__features-item">
+                <div class="program__features-item-icon">
+                  <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.5 0C4.70217 0 0 4.70217 0 10.5C0 16.2978 4.70217 21 10.5 21C16.2978 21 21 16.2978 21 10.5C21 4.70217 16.2978 0 10.5 0ZM17.0054 7.9663L9.0163 15.9326C8.76522 15.9326 8.62826 15.9326 8.37717 15.9326L3.51522 11.0478C3.51522 10.7967 3.51522 10.6598 3.51522 10.4087L5.43261 8.4913C5.6837 8.4913 5.82065 8.4913 6.07174 8.4913L8.69674 11.1163L14.4261 5.38696C14.6772 5.38696 14.8141 5.38696 15.0652 5.38696L16.9826 7.30435C17.0054 7.55544 17.0054 7.71522 17.0054 7.9663Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="program__features-item-title">
+                  В последний день обучения вы закрепите пройденный материал и получите Свидетельство об окончании курса
+                </div>
+              </div>
+            </div>
+            <div class="program__item-row align-items-center">
+              <div class="program__item-pricing">
+                <div class="program__item-pricing-old">14 000 ₽</div>
+                <div class="program__item-pricing-economy">Экономия 7 000 ₽</div>
+                <div class="program__item-pricing-current">6 000 ₽</div>
+              </div>
+              <div class="program__item-actions">
+                <form class="form-inline">
+                  <span><input type="hidden" name="formname" value="Мастер ремонта стиральных машин" /> </span
+                  ><span class="form-control-wrap"
+                    ><input type="tel" class="form-control" name="phone" placeholder="Ваш телефон" /> </span
+                  ><button type="submit" class="btn btn-blue">Записаться на курс</button>
+                  <div class="form-text">
+                    Нажимая кнопку “Записаться на курс”, я даю согласие на обработку персональных данных
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header id="header" class="header">
+      <div class="header__img"><img src="assets/img/header.png" alt="" /></div>
+      <nav id="main-navigation" class="navigation">
+        <div class="navigation__list-header">
+          <section class="container">
+            <div class="row justify-content-between align-items-center">
+              <div class="col-lg-4 col-10">
+                <a href="/" class="logo"
+                  ><div class="logo__img"><img src="assets/img/logo.svg" alt="" /></div>
+                  <div class="logo__text">Обучение<br />с трудоустройством</div></a
+                >
+              </div>
+              <div class="col-lg-auto navigation__city-picker-col">
+                <form class="city-picker">
+                  <select id="city" class="custom-select"
+                    ><option selected="selected">Санкт-Петербург</option
+                    ><option value="1">One</option
+                    ><option value="2">Two</option
+                    ><option value="3">Three</option></select
+                  >
+                </form>
+              </div>
+              <div class="col-lg-auto col-2 d-flex justify-content-end navigation__contacts-col">
+                <div class="navigation__contacts">
+                  <a href="tel:+71111111111" class="navigation__contacts-phone d-lg-none d-xl-inline-block"
+                    >+7 111 111 11 11 </a
+                  ><button
+                    type="button"
+                    class="btn btn-gray-bordered d-none d-lg-inline-block"
+                    data-toggle="modal"
+                    data-target="#callback"
+                  >
+                    <div class="btn-gray-bordered-text">Записаться</div>
+                    <div class="btn-gray-bordered-icon">
+                      <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M5.12562 8.63065C7.28526 12.1314 8.72503 13.5317 12.3245 15.6321L15.204 12.8315C16.6745 13.1969 18.5309 13.6985 20.0209 13.6925C20.5175 13.6887 21.0122 14.1717 21.0256 14.6332L20.9921 19.0022C20.9901 19.4854 20.4914 19.9705 19.9853 20C7.57811 20.0212 0.405602 13.0452 0.00238694 0.954842C-0.0387951 0.487679 0.459912 0.00262893 0.956565 0.000628928H5.87667C6.41992 -0.0197813 6.91458 0.461307 7.03247 0.755148C6.90652 2.39371 7.62089 4.39243 8.00517 5.83095L5.12562 8.63065Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+                <div class="navigation__hamburger"><span></span> <span></span> <span></span></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="navigation__mobile">
+          <section class="container">
+            <ul class="navigation__list">
+              <li class="navigation__list-item"><a href="#advantages">Преимущества</a></li>
+              <li class="navigation__list-item"><a href="#program">Программа</a></li>
+              <li class="navigation__list-item"><a href="#about">О центре</a></li>
+              <li class="navigation__list-item"><a href="#useful">Польза</a></li>
+              <li class="navigation__list-item"><a href="#faq">FAQ</a></li>
+              <li class="navigation__list-item"><a href="#contacts">Контакты</a></li>
+            </ul>
+            <form class="city-picker">
+              <select id="city-dublicate" class="custom-select"
+                ><option selected="selected">Санкт-Петербург</option
+                ><option value="One">One</option
+                ><option value="Two">Two</option
+                ><option value="Three">Three</option></select
+              >
+            </form>
+            <div class="navigation__contacts">
+              <a href="tel:+71111111111" class="navigation__contacts-phone">+71111111111</a><br /><button
+                type="button"
+                class="btn btn-blue"
+                data-toggle="modal"
+                data-target="#callback"
+              >
+                Записаться
+              </button>
+            </div>
+          </section>
+        </div>
+      </nav>
+      <div class="header__offer">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-8 col-lg-9">
+              <h2 class="header__offer-title">Ищете работу? Пройдите обучение!</h2>
+              <div class="header__offer-tagline">
+                и получите <span class="bold">гарантированное</span> трудоустройство!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__features">
+        <div class="container">
+          <div class="header__features-list">
+            <div class="header__features-list-item">
+              <div class="header__features-list-item-icon"><img src="assets/img/icons/checked.svg" alt="" /></div>
+              <div class="header__features-list-item-title header__features-list-item-title--large">
+                З/П от 40 000 ₽
+              </div>
+            </div>
+            <div class="header__features-list-item">
+              <div class="header__features-list-item-icon"><img src="assets/img/icons/checked.svg" alt="" /></div>
+              <div class="header__features-list-item-title">Сменный график</div>
+            </div>
+            <div class="header__features-list-item">
+              <div class="header__features-list-item-icon"><img src="assets/img/icons/checked.svg" alt="" /></div>
+              <div class="header__features-list-item-title">Диплом после обучения</div>
+            </div>
+            <div class="header__features-list-item">
+              <div class="header__features-list-item-icon"><img src="assets/img/icons/checked.svg" alt="" /></div>
+              <div class="header__features-list-item-title">Высокий доход</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__courses">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="header__courses-item">
+                <div class="header__courses-item-title">Мастер ремонта стиральных и посудомоечных машин</div>
+                <div class="header__courses-item-pricing">
+                  <div class="header__courses-item-cost">
+                    <div class="header__courses-item-cost-old">12 000 ₽</div>
+                    <div class="header__courses-item-cost-current">5 000 ₽</div>
+                  </div>
+                  <div class="header__courses-item-economy">Экономия 7 000 ₽</div>
+                </div>
+                <button
+                  class="btn btn-blue"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#callback"
+                  data-name="Запись на курс ремонта стиральных машин"
+                >
+                  Записаться на курс
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="header__courses-item">
+                <div class="header__courses-item-title">Мастер ремонта холодильников</div>
+                <div class="header__courses-item-pricing">
+                  <div class="header__courses-item-cost">
+                    <div class="header__courses-item-cost-old">14 000 ₽</div>
+                    <div class="header__courses-item-cost-current">6 000 ₽</div>
+                  </div>
+                  <div class="header__courses-item-economy">Экономия 8 000 ₽</div>
+                </div>
+                <button
+                  class="btn btn-blue"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#callback"
+                  data-name="Запись на курс ремонт холодильников"
+                >
+                  Записаться на курс
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="features" id="advantages">
+      <div class="container">
+        <h2 class="block-title">У нас вы получите</h2>
+        <div class="features__list">
+          <div class="features__list-item">
+            <div class="features__list-item-icon">
+              <svg width="53" height="45" viewBox="0 0 53 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M39.0938 0H13.0312L0 22.5H18.375C18.375 18.3579 21.7329 15 25.875 15C30.0171 15 33.375 18.3578 33.375 22.5L52.125 22.5L39.0938 0ZM18.375 22.5C18.375 26.6421 21.7329 30 25.875 30C30.0171 30 33.375 26.6421 33.375 22.5L52.125 22.5L39.0938 45L13.0313 45L0 22.5H18.375Z"
+                  fill="#AEBECC"
+                />
+              </svg>
+            </div>
+            <div class="features__list-item-title">90% практики</div>
+            <div class="features__list-item-desc">
+              Мы не обучаем по картинкам и книжкам. Почти весь процесс строится на практике. Здесь вы действительно
+              научитесь делать ремонт и выйдите уже с опытом.
+            </div>
+          </div>
+          <div class="features__list-item">
+            <div class="features__list-item-icon">
+              <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 41.4049V37.8098H13.769H27.538V41.4049V45H13.769H0V41.4049ZM35.0217 41.4049V37.8098H40.0109H45V41.4049V45H40.0109H35.0217V41.4049ZM0 22.5489V18.9293H13.769H27.538V22.5489V26.1685H13.769H0V22.5489ZM35.0217 22.5489V18.9293H40.0109H45V22.5489V26.1685H40.0109H35.0217V22.5489ZM0 3.61957V0H13.769H27.538V3.61957V7.23913H13.769H0V3.61957ZM35.0217 3.61957V0H40.0109H45V3.61957V7.23913H40.0109H35.0217V3.61957Z"
+                  fill="#AEBECC"
+                />
+              </svg>
+            </div>
+            <div class="features__list-item-title">Личное портфолио</div>
+            <div class="features__list-item-desc">
+              Чтобы было проще начать карьеру, поможем составить собственное портфолио на основе работ, выполненных в
+              ходе обучения.
+            </div>
+          </div>
+          <div class="features__list-item">
+            <div class="features__list-item-icon">
+              <svg width="55" height="45" viewBox="0 0 55 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M55 12.5V45H12.5V37.5H47.5V12.5H55ZM35 32.5H0V0H42.5V32.5H35ZM7.5 25H35V7.5H7.5V25ZM21.25 11.25C20.2611 11.25 19.2944 11.5432 18.4721 12.0927C17.6499 12.6421 17.009 13.423 16.6306 14.3366C16.2522 15.2502 16.1531 16.2555 16.3461 17.2255C16.539 18.1954 17.0152 19.0863 17.7145 19.7855C18.4137 20.4848 19.3046 20.961 20.2745 21.1539C21.2445 21.3469 22.2498 21.2478 23.1634 20.8694C24.077 20.491 24.8579 19.8501 25.4073 19.0279C25.9568 18.2056 26.25 17.2389 26.25 16.25C26.25 14.9239 25.7232 13.6521 24.7855 12.7145C23.8479 11.7768 22.5761 11.25 21.25 11.25Z"
+                  fill="#AEBECC"
+                />
+              </svg>
+            </div>
+            <div class="features__list-item-title">З\П от 40 000 ₽</div>
+            <div class="features__list-item-desc">
+              Гарантируем, что после посещения нашего учебного центра вы получите прибыльную работу с доходом не ниже
+              названной суммы.
+            </div>
+          </div>
+          <div class="features__list-item">
+            <div class="features__list-item-icon">
+              <svg width="55" height="52" viewBox="0 0 55 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M51.5625 52H3.4375C1.54 52 0 50.4634 0 48.5625V14.1875C0 12.29 1.54 10.75 3.4375 10.75H51.5625C53.4634 10.75 55 12.29 55 14.1875V48.5625C55 50.4634 53.4634 52 51.5625 52ZM6.875 45.125H48.125V17.625H6.875V45.125ZM41.25 17.625H13.75V7.31248C13.75 3.52436 16.83 0.440918 20.6216 0.440918H34.3784C38.17 0.440918 41.25 3.52436 41.25 7.31248V17.625ZM20.625 10.75H34.375V7.31248L20.6216 7.31592L20.625 10.75ZM27.5 38.25L26.5547 38.1194L2.49219 31.2444L4.38281 24.634L27.5 31.2375L50.6206 24.634L52.5078 31.2444L28.4453 38.1194L27.5 38.25Z"
+                  fill="#AEBECC"
+                />
+              </svg>
+            </div>
+            <div class="features__list-item-title">Трудоустройство</div>
+            <div class="features__list-item-desc">
+              Наши выпускники без проблем находят себе место в престижных ремотных мастерских. Многих мы устраиваем
+              самостоятельно в собственный сервис.
+            </div>
+          </div>
+          <div class="features__list-item">
+            <div class="features__list-item-icon">
+              <svg width="46" height="58" viewBox="0 0 46 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M45.36 4.12364V0H6.18545C4.54497 0 2.97168 0.65168 1.81168 1.81168C0.65168 2.97168 0 4.54497 0 6.18546C0 7.82594 0.65168 9.39923 1.81168 10.5592C2.97168 11.7192 4.54497 12.3709 6.18545 12.3709H45.36V8.24727H8.24727V4.12364H45.36Z"
+                  fill="#AEBECC"
+                />
+                <path
+                  d="M0 14.3792V51.5455C0 53.186 0.65168 54.7593 1.81168 55.9193C2.97168 57.0793 4.54497 57.7309 6.18545 57.7309H45.36V16.4946H6.18545C3.94741 16.487 1.77397 15.7437 0 14.3792Z"
+                  fill="#AEBECC"
+                />
+              </svg>
+            </div>
+            <div class="features__list-item-title">Актуальные знания</div>
+            <div class="features__list-item-desc">
+              Предлагаем современный подход к обучению. Работаем с новыми моделями оборудования, используем самые
+              технологинчые инструменты
+            </div>
+          </div>
+          <div class="features__list-item">
+            <div class="features__list-item-icon">
+              <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M32.5 0C14.5793 0 0 14.5793 0 32.5C0 50.4207 14.5793 65 32.5 65C50.4207 65 65 50.4207 65 32.5C65 14.5793 50.4207 0 32.5 0ZM32.5 60C17.3364 60 5 47.6636 5 32.5C5 17.3364 17.3364 5 32.5 5C47.6636 5 60 17.3364 60 32.5C60 47.6636 47.6636 60 32.5 60ZM30 26.5429L21.2743 17.9779L17.7714 21.5464L35 38.4571V10.2386H30V26.5429Z"
+                  fill="#AEBECC"
+                />
+              </svg>
+            </div>
+            <div class="features__list-item-title">Гибкий график</div>
+            <div class="features__list-item-desc">
+              В сервисном центре мастерам предлагают удобные условия работы и комфортный график
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="program" id="program">
+      <div class="container">
+        <h2 class="block-title">Учебная программа</h2>
+        <div class="program__item">
+          <div class="program__item-row">
+            <div class="program__item-info">
+              <div class="program__item-title">Мастер ремонта стиральных и посудомоечных машин</div>
+              <div class="program__item-desc">5 рабочих дней по 7 часов в день. С 10:00 до 17:00</div>
+              <div class="program__item-hours">
+                <div class="program__item-hours-item">
+                  <div class="program__item-hours-item-title">Теория <span class="bold">10 ч</span>.</div>
+                  <div class="program__item-hours-item-bar"></div>
+                </div>
+                <div class="program__item-hours-item">
+                  <div class="program__item-hours-item-title">Практика <span class="bold">20 ч</span>.</div>
+                  <div class="program__item-hours-item-bar"></div>
+                </div>
+              </div>
+            </div>
+            <div class="program__item-additional">
+              <div class="program__item-discount">
+                <div class="program__item-discount-icon">
+                  <svg width="170" height="171" viewBox="0 0 170 171" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M133.722 45.9672L162.841 47.5672L144.829 74.6672L164.942 85.5672L144.829 96.4672L162.841 123.567L133.722 125.167L139.326 150.867L112.709 140.367L102.803 169.567L84.992 148.767L67.0808 169.567L57.1746 140.367L30.558 150.867L36.1615 125.167L7.04327 123.567L25.0545 96.4672L4.94196 85.5672L25.0545 74.6672L7.04327 47.5672L36.1615 45.9672L30.558 20.2672L57.1746 30.6672L67.0808 1.56715L84.992 22.3672L102.803 1.56715L112.709 30.6672L139.326 20.2672L133.722 45.9672Z"
+                      fill="#3069FC"
+                    />
+                    <path
+                      d="M147.771 85.1094L169.511 104.546L138.519 114.46L147.418 135.535L124.903 131.485L122.042 163.898L98.3032 146.961L86.6273 170.531L72.3992 145.707L46.4249 162.323L45.5068 134.955L18.5275 140.011L29.0293 111.02L1.68479 102.596L22.1129 86.025L0.372314 66.5884L31.3647 56.6744L22.4658 35.5998L44.9808 39.6496L47.8413 7.23615L71.5805 24.1736L83.2565 0.603271L97.547 25.3497L123.459 8.81135L124.455 36.2423L151.356 31.1232L140.917 60.0362L168.199 68.5389L147.771 85.1094Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="program__item-discount-title">скидка <span>60%</span> на курсы</div>
+              </div>
+              <div class="program__item-timer">
+                <div class="program__item-timer-title">До конца акции</div>
+                <div id="countdown-second"></div>
+              </div>
+            </div>
+          </div>
+          <div class="program__item-row align-items-center">
+            <div class="program__item-pricing">
+              <div class="program__item-pricing-old">12 000 ₽</div>
+              <div class="program__item-pricing-economy">Экономия 7 000 ₽</div>
+              <div class="program__item-pricing-current">5 000 ₽</div>
+            </div>
+            <div class="program__item-actions">
+              <button class="btn btn-special mr-md-4" type="button" data-toggle="modal" data-target="#program-washer">
+                <div class="icon-left">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M21.7339 20.4752L17.1326 15.8742C18.5792 14.1386 19.3677 11.9732 19.3677 9.68596C19.3674 7.09861 18.3602 4.66631 16.5306 2.83708C14.7014 1.0075 12.2688 0 9.68176 0C7.09441 0 4.66175 1.0075 2.83253 2.83708C-0.944176 6.61379 -0.944176 12.7588 2.83253 16.5352C4.66175 18.3648 7.09441 19.3723 9.68176 19.3723C11.9686 19.3723 14.1341 18.5838 15.8697 17.1372L20.471 21.7385C20.6453 21.9128 20.874 22 21.1026 22C21.3313 22 21.5596 21.9128 21.7343 21.7385C22.0826 21.3898 22.0826 20.8242 21.7339 20.4752ZM4.09584 15.2722C1.01581 12.1919 1.01581 7.18042 4.09584 4.10004C5.58816 2.60807 7.57172 1.78635 9.68212 1.78635C11.7918 1.78635 13.7757 2.60807 15.268 4.10004C16.76 5.592 17.5821 7.57592 17.5821 9.68596C17.5821 11.7964 16.76 13.7799 15.268 15.2722C13.7757 16.7642 11.7922 17.5859 9.68212 17.5859C7.57172 17.5859 5.5878 16.7642 4.09584 15.2722Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="btn-special-text">Программа курса</div>
+                <div class="icon-right">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="11" fill="#3069FC" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 16L10 6L12 6L12 16L10 16Z" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 10L16 10L16 12L6 12L6 10Z" fill="white" />
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="btn btn-blue"
+                type="button"
+                data-toggle="modal"
+                data-target="#callback"
+                data-name="Записаться на курс ремонт стиральных машин"
+              >
+                Записаться на курс
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="program__item">
+          <div class="program__item-row">
+            <div class="program__item-info">
+              <div class="program__item-title">Мастер ремонта<br />холодильников</div>
+              <div class="program__item-desc">5 рабочих дней по 7 часов в день. С 10:00 до 17:00</div>
+              <div class="program__item-hours">
+                <div class="program__item-hours-item">
+                  <div class="program__item-hours-item-title">Теория <span class="bold">10 ч</span>.</div>
+                  <div class="program__item-hours-item-bar"></div>
+                </div>
+                <div class="program__item-hours-item">
+                  <div class="program__item-hours-item-title">Практика <span class="bold">20 ч</span>.</div>
+                  <div class="program__item-hours-item-bar"></div>
+                </div>
+              </div>
+            </div>
+            <div class="program__item-additional">
+              <div class="program__item-discount">
+                <div class="program__item-discount-icon">
+                  <svg width="170" height="171" viewBox="0 0 170 171" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M133.722 45.9672L162.841 47.5672L144.829 74.6672L164.942 85.5672L144.829 96.4672L162.841 123.567L133.722 125.167L139.326 150.867L112.709 140.367L102.803 169.567L84.992 148.767L67.0808 169.567L57.1746 140.367L30.558 150.867L36.1615 125.167L7.04327 123.567L25.0545 96.4672L4.94196 85.5672L25.0545 74.6672L7.04327 47.5672L36.1615 45.9672L30.558 20.2672L57.1746 30.6672L67.0808 1.56715L84.992 22.3672L102.803 1.56715L112.709 30.6672L139.326 20.2672L133.722 45.9672Z"
+                      fill="#3069FC"
+                    />
+                    <path
+                      d="M147.771 85.1094L169.511 104.546L138.519 114.46L147.418 135.535L124.903 131.485L122.042 163.898L98.3032 146.961L86.6273 170.531L72.3992 145.707L46.4249 162.323L45.5068 134.955L18.5275 140.011L29.0293 111.02L1.68479 102.596L22.1129 86.025L0.372314 66.5884L31.3647 56.6744L22.4658 35.5998L44.9808 39.6496L47.8413 7.23615L71.5805 24.1736L83.2565 0.603271L97.547 25.3497L123.459 8.81135L124.455 36.2423L151.356 31.1232L140.917 60.0362L168.199 68.5389L147.771 85.1094Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="program__item-discount-title">скидка <span>60%</span> на курсы</div>
+              </div>
+              <div class="program__item-timer">
+                <div class="program__item-timer-title">До конца акции</div>
+                <div id="countdown-first"></div>
+              </div>
+            </div>
+          </div>
+          <div class="program__item-row align-items-center">
+            <div class="program__item-pricing">
+              <div class="program__item-pricing-old">14 000 ₽</div>
+              <div class="program__item-pricing-economy">Экономия 7 000 ₽</div>
+              <div class="program__item-pricing-current">6 000 ₽</div>
+            </div>
+            <div class="program__item-actions">
+              <button class="btn btn-special mr-md-4" type="button" data-toggle="modal" data-target="#program-fridge">
+                <div class="icon-left">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M21.7339 20.4752L17.1326 15.8742C18.5792 14.1386 19.3677 11.9732 19.3677 9.68596C19.3674 7.09861 18.3602 4.66631 16.5306 2.83708C14.7014 1.0075 12.2688 0 9.68176 0C7.09441 0 4.66175 1.0075 2.83253 2.83708C-0.944176 6.61379 -0.944176 12.7588 2.83253 16.5352C4.66175 18.3648 7.09441 19.3723 9.68176 19.3723C11.9686 19.3723 14.1341 18.5838 15.8697 17.1372L20.471 21.7385C20.6453 21.9128 20.874 22 21.1026 22C21.3313 22 21.5596 21.9128 21.7343 21.7385C22.0826 21.3898 22.0826 20.8242 21.7339 20.4752ZM4.09584 15.2722C1.01581 12.1919 1.01581 7.18042 4.09584 4.10004C5.58816 2.60807 7.57172 1.78635 9.68212 1.78635C11.7918 1.78635 13.7757 2.60807 15.268 4.10004C16.76 5.592 17.5821 7.57592 17.5821 9.68596C17.5821 11.7964 16.76 13.7799 15.268 15.2722C13.7757 16.7642 11.7922 17.5859 9.68212 17.5859C7.57172 17.5859 5.5878 16.7642 4.09584 15.2722Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+                <div class="btn-special-text">Программа курса</div>
+                <div class="icon-right">
+                  <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="11" fill="#3069FC" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M10 16L10 6L12 6L12 16L10 16Z" fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6 10L16 10L16 12L6 12L6 10Z" fill="white" />
+                  </svg>
+                </div>
+              </button>
+              <button
+                class="btn btn-blue"
+                type="button"
+                data-toggle="modal"
+                data-target="#callback"
+                data-name="Записаться на курс ремонта холодильников"
+              >
+                Записаться на курс
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="block-title">О нашем центре</h2>
+            <div class="about__desc">
+              Мы создали целую сеть учебных центров, в которых готовим грамотных специалистов по обслуживанию бытовой
+              техники. Наша задача состоит в том, чтобы за короткий срок с нуля подготовить квалифицированного мастера,
+              способного починить холодильник, посудомойку и стиральную машину, соблюдая высочайшие стандарты качества.
+              Команда профессиональных преподавателей обучит новичков азам ремонта, поведает об особенностях тех или
+              иных моделях бытовой техники и даст внушительное количество практических знаний.
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex d-lg-block justify-content-between flex-wrap">
+            <div class="about__item">
+              <div class="about__item-title">Более <span>2500</span></div>
+              <div class="about__item-desc">выпущенных<br />профессионалов</div>
+            </div>
+            <div class="about__item">
+              <div class="about__item-title">Более <span>13</span></div>
+              <div class="about__item-desc">лет обучаем</div>
+            </div>
+            <div class="about__item">
+              <div class="about__item-title"><span>93%</span></div>
+              <div class="about__item-desc">отучившихся работают по специальности.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="diplom">
+      <div class="container">
+        <div class="diplom__wrap">
+          <div class="diplom__img"><img src="assets/img/diplom.png" alt="" /></div>
+          <div class="diplom__content">
+            <div class="diplom__title">После окончания обучения вы получаете диплом</div>
+            <div class="diplom__desc">Мы не требуем дополнительную оплату за выдачу диплома!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <a class="gallery__item" data-fancybox="gallery" href="assets/img/gallery/1-big.jpg"
+              ><img src="assets/img/gallery/1.jpg" alt="" />
+              <div class="gallery__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M70.9227 66.8151L55.9077 51.8012C60.6282 46.1375 63.2012 39.0713 63.2012 31.6075C63.2001 23.1644 59.9135 15.2272 53.9432 9.25805C47.974 3.28771 40.0357 0 31.5938 0C23.1507 0 15.2124 3.28771 9.24318 9.25805C-3.08106 21.5823 -3.08106 41.635 9.24318 53.9581C15.2124 59.9284 23.1507 63.2161 31.5938 63.2161C39.0564 63.2161 46.1226 60.6431 51.7864 55.9225L66.8014 70.9376C67.3703 71.5065 68.1165 71.791 68.8626 71.791C69.6088 71.791 70.3538 71.5065 70.9239 70.9376C72.0606 69.7997 72.0606 67.9541 70.9227 66.8151ZM13.3656 49.8368C3.31481 39.7848 3.31481 23.4313 13.3656 13.3793C18.2354 8.51073 24.7082 5.82927 31.5949 5.82927C38.4793 5.82927 44.9533 8.51073 49.8231 13.3793C54.6917 18.2479 57.3743 24.7219 57.3743 31.6075C57.3743 38.4942 54.6917 44.967 49.8231 49.8368C44.9533 54.7054 38.4805 57.3868 31.5949 57.3868C24.7082 57.3868 18.2342 54.7054 13.3656 49.8368Z"
+                    fill="white"
+                  />
+                </svg></div
+            ></a>
+          </div>
+          <div class="col-6">
+            <a class="gallery__item" data-fancybox="gallery" href="assets/img/gallery/2-big.jpg"
+              ><img src="assets/img/gallery/2.jpg" alt="" />
+              <div class="gallery__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M70.9227 66.8151L55.9077 51.8012C60.6282 46.1375 63.2012 39.0713 63.2012 31.6075C63.2001 23.1644 59.9135 15.2272 53.9432 9.25805C47.974 3.28771 40.0357 0 31.5938 0C23.1507 0 15.2124 3.28771 9.24318 9.25805C-3.08106 21.5823 -3.08106 41.635 9.24318 53.9581C15.2124 59.9284 23.1507 63.2161 31.5938 63.2161C39.0564 63.2161 46.1226 60.6431 51.7864 55.9225L66.8014 70.9376C67.3703 71.5065 68.1165 71.791 68.8626 71.791C69.6088 71.791 70.3538 71.5065 70.9239 70.9376C72.0606 69.7997 72.0606 67.9541 70.9227 66.8151ZM13.3656 49.8368C3.31481 39.7848 3.31481 23.4313 13.3656 13.3793C18.2354 8.51073 24.7082 5.82927 31.5949 5.82927C38.4793 5.82927 44.9533 8.51073 49.8231 13.3793C54.6917 18.2479 57.3743 24.7219 57.3743 31.6075C57.3743 38.4942 54.6917 44.967 49.8231 49.8368C44.9533 54.7054 38.4805 57.3868 31.5949 57.3868C24.7082 57.3868 18.2342 54.7054 13.3656 49.8368Z"
+                    fill="white"
+                  />
+                </svg></div
+            ></a>
+          </div>
+          <div class="col-6">
+            <a class="gallery__item" data-fancybox="gallery" href="assets/img/gallery/3-big.jpg"
+              ><img src="assets/img/gallery/3.jpg" alt="" />
+              <div class="gallery__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M70.9227 66.8151L55.9077 51.8012C60.6282 46.1375 63.2012 39.0713 63.2012 31.6075C63.2001 23.1644 59.9135 15.2272 53.9432 9.25805C47.974 3.28771 40.0357 0 31.5938 0C23.1507 0 15.2124 3.28771 9.24318 9.25805C-3.08106 21.5823 -3.08106 41.635 9.24318 53.9581C15.2124 59.9284 23.1507 63.2161 31.5938 63.2161C39.0564 63.2161 46.1226 60.6431 51.7864 55.9225L66.8014 70.9376C67.3703 71.5065 68.1165 71.791 68.8626 71.791C69.6088 71.791 70.3538 71.5065 70.9239 70.9376C72.0606 69.7997 72.0606 67.9541 70.9227 66.8151ZM13.3656 49.8368C3.31481 39.7848 3.31481 23.4313 13.3656 13.3793C18.2354 8.51073 24.7082 5.82927 31.5949 5.82927C38.4793 5.82927 44.9533 8.51073 49.8231 13.3793C54.6917 18.2479 57.3743 24.7219 57.3743 31.6075C57.3743 38.4942 54.6917 44.967 49.8231 49.8368C44.9533 54.7054 38.4805 57.3868 31.5949 57.3868C24.7082 57.3868 18.2342 54.7054 13.3656 49.8368Z"
+                    fill="white"
+                  />
+                </svg></div
+            ></a>
+          </div>
+          <div class="col-md-4 col-6">
+            <a class="gallery__item" data-fancybox="gallery" href="assets/img/gallery/4-big.jpg"
+              ><img src="assets/img/gallery/4.jpg" alt="" />
+              <div class="gallery__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M70.9227 66.8151L55.9077 51.8012C60.6282 46.1375 63.2012 39.0713 63.2012 31.6075C63.2001 23.1644 59.9135 15.2272 53.9432 9.25805C47.974 3.28771 40.0357 0 31.5938 0C23.1507 0 15.2124 3.28771 9.24318 9.25805C-3.08106 21.5823 -3.08106 41.635 9.24318 53.9581C15.2124 59.9284 23.1507 63.2161 31.5938 63.2161C39.0564 63.2161 46.1226 60.6431 51.7864 55.9225L66.8014 70.9376C67.3703 71.5065 68.1165 71.791 68.8626 71.791C69.6088 71.791 70.3538 71.5065 70.9239 70.9376C72.0606 69.7997 72.0606 67.9541 70.9227 66.8151ZM13.3656 49.8368C3.31481 39.7848 3.31481 23.4313 13.3656 13.3793C18.2354 8.51073 24.7082 5.82927 31.5949 5.82927C38.4793 5.82927 44.9533 8.51073 49.8231 13.3793C54.6917 18.2479 57.3743 24.7219 57.3743 31.6075C57.3743 38.4942 54.6917 44.967 49.8231 49.8368C44.9533 54.7054 38.4805 57.3868 31.5949 57.3868C24.7082 57.3868 18.2342 54.7054 13.3656 49.8368Z"
+                    fill="white"
+                  />
+                </svg></div
+            ></a>
+          </div>
+          <div class="col-md-4 col-6">
+            <a class="gallery__item" data-fancybox="gallery" href="assets/img/gallery/5-big.jpg"
+              ><img src="assets/img/gallery/5.jpg" alt="" />
+              <div class="gallery__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M70.9227 66.8151L55.9077 51.8012C60.6282 46.1375 63.2012 39.0713 63.2012 31.6075C63.2001 23.1644 59.9135 15.2272 53.9432 9.25805C47.974 3.28771 40.0357 0 31.5938 0C23.1507 0 15.2124 3.28771 9.24318 9.25805C-3.08106 21.5823 -3.08106 41.635 9.24318 53.9581C15.2124 59.9284 23.1507 63.2161 31.5938 63.2161C39.0564 63.2161 46.1226 60.6431 51.7864 55.9225L66.8014 70.9376C67.3703 71.5065 68.1165 71.791 68.8626 71.791C69.6088 71.791 70.3538 71.5065 70.9239 70.9376C72.0606 69.7997 72.0606 67.9541 70.9227 66.8151ZM13.3656 49.8368C3.31481 39.7848 3.31481 23.4313 13.3656 13.3793C18.2354 8.51073 24.7082 5.82927 31.5949 5.82927C38.4793 5.82927 44.9533 8.51073 49.8231 13.3793C54.6917 18.2479 57.3743 24.7219 57.3743 31.6075C57.3743 38.4942 54.6917 44.967 49.8231 49.8368C44.9533 54.7054 38.4805 57.3868 31.5949 57.3868C24.7082 57.3868 18.2342 54.7054 13.3656 49.8368Z"
+                    fill="white"
+                  />
+                </svg></div
+            ></a>
+          </div>
+          <div class="col-md-4 col-12">
+            <a class="gallery__item" data-fancybox="gallery" href="assets/img/gallery/6-big.jpg"
+              ><img src="assets/img/gallery/6.jpg" alt="" />
+              <div class="gallery__item-icon">
+                <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M70.9227 66.8151L55.9077 51.8012C60.6282 46.1375 63.2012 39.0713 63.2012 31.6075C63.2001 23.1644 59.9135 15.2272 53.9432 9.25805C47.974 3.28771 40.0357 0 31.5938 0C23.1507 0 15.2124 3.28771 9.24318 9.25805C-3.08106 21.5823 -3.08106 41.635 9.24318 53.9581C15.2124 59.9284 23.1507 63.2161 31.5938 63.2161C39.0564 63.2161 46.1226 60.6431 51.7864 55.9225L66.8014 70.9376C67.3703 71.5065 68.1165 71.791 68.8626 71.791C69.6088 71.791 70.3538 71.5065 70.9239 70.9376C72.0606 69.7997 72.0606 67.9541 70.9227 66.8151ZM13.3656 49.8368C3.31481 39.7848 3.31481 23.4313 13.3656 13.3793C18.2354 8.51073 24.7082 5.82927 31.5949 5.82927C38.4793 5.82927 44.9533 8.51073 49.8231 13.3793C54.6917 18.2479 57.3743 24.7219 57.3743 31.6075C57.3743 38.4942 54.6917 44.967 49.8231 49.8368C44.9533 54.7054 38.4805 57.3868 31.5949 57.3868C24.7082 57.3868 18.2342 54.7054 13.3656 49.8368Z"
+                    fill="white"
+                  />
+                </svg></div
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-us">
+      <div class="container">
+        <h2 class="block-title">Заполните форму и запишитесь на обучающий курс!</h2>
+        <form class="form-inline">
+          <input type="hidden" name="formname" value="Свяжитесь с нами" />
+          <div class="form-control-wrap">
+            <input class="form-control" name="fullname" placeholder="Ваше имя" required />
+          </div>
+          <div class="form-control-wrap">
+            <input type="tel" class="form-control" name="fullname" placeholder="Ваш телефон" required />
+          </div>
+          <button class="btn btn-blue" type="submit">Записаться на обучение</button>
+          <div class="form-text">
+            Нажимая кнопку “Записаться на обучение”, я даю согласие на обработку персональных данных
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="after" id="useful">
+      <div class="container">
+        <h2 class="block-title">После окончания курса вы сможете:</h2>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="after__img"><img src="assets/img/after/1.jpg" alt="" /></div>
+          </div>
+          <div class="col-md-7">
+            <div class="after__item">
+              <div class="after__item-title">Выявлять основные неисправности</div>
+              <div class="after__item-desc">
+                В первую очередь рассказываем о ходовых проблемах, встречающихся чаще всего. О том, как быстро их
+                диагностировать, а потом исправить с минимальными затратами сил, ресурсов и времени.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 order-2 order-md-1">
+            <div class="after__item">
+              <div class="after__item-title">Разбираться в элементах</div>
+              <div class="after__item-desc">
+                Расскажем об устройстве каждого вида техники. Покажем, как работает каждый элемент, что от чего зависит,
+                что к чему подключается. Поясним все, от общеизвестных азов до мелких деталей, с которыми не всегда
+                знакомы даже опытные мастера.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 order-1 order-md-2">
+            <div class="after__img"><img src="assets/img/after/2.jpg" alt="" /></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-5">
+            <div class="after__img"><img src="assets/img/after/3.jpg" alt="" /></div>
+          </div>
+          <div class="col-md-7">
+            <div class="after__item">
+              <div class="after__item-title">Разбираться в электронных модулях</div>
+              <div class="after__item-desc">
+                Обучим работе с электронными модулями в разных типах бытовой техники. То есть, с так называемыми
+                «мозгами», которые тоже нередко выходят из строя и ремонтируются гораздо сложнее большинства
+                механических деталей.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-7 order-2 order-md-1">
+            <div class="after__item">
+              <div class="after__item-title">Чинить любую бытовую технику</div>
+              <div class="after__item-desc">
+                На практике покажем, как устроены различные виды и бренды бытовой техники. Уходя от нас, вы сможете
+                починить любой вид техники независимо от производителя. Гарантируем, что вашего опыта и знаний для этого
+                хватит.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 order-1 order-md-2">
+            <div class="after__img"><img src="assets/img/after/4.jpg" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reasons">
+      <div class="container">
+        <h2 class="block-title">Вам подходят наши курсы, если вы:</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="reasons__item">
+              <div class="reasons__item-header">
+                <div class="reasons__item-icon">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.5 0C3.3587 0 0 3.3587 0 7.5C0 11.6413 3.3587 15 7.5 15C11.6413 15 15 11.6413 15 7.5C15 3.3587 11.6413 0 7.5 0ZM12.1467 5.69022L6.44022 11.3804C6.26087 11.3804 6.16304 11.3804 5.9837 11.3804L2.51087 7.8913C2.51087 7.71196 2.51087 7.61413 2.51087 7.43478L3.88043 6.06522C4.05978 6.06522 4.15761 6.06522 4.33696 6.06522L6.21196 7.94022L10.3043 3.84783C10.4837 3.84783 10.5815 3.84783 10.7609 3.84783L12.1304 5.21739C12.1467 5.39674 12.1467 5.51087 12.1467 5.69022Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="reasons__item-title">Ищете работу или хотите сменить профессию</div>
+              </div>
+              <div class="reasons__item-desc">
+                Принимаем даже тех, у кого нет профильного образования. Всему научим. Лишь бы было желание и достаточно
+                энтузиазма.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="reasons__item">
+              <div class="reasons__item-header">
+                <div class="reasons__item-icon">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.5 0C3.3587 0 0 3.3587 0 7.5C0 11.6413 3.3587 15 7.5 15C11.6413 15 15 11.6413 15 7.5C15 3.3587 11.6413 0 7.5 0ZM12.1467 5.69022L6.44022 11.3804C6.26087 11.3804 6.16304 11.3804 5.9837 11.3804L2.51087 7.8913C2.51087 7.71196 2.51087 7.61413 2.51087 7.43478L3.88043 6.06522C4.05978 6.06522 4.15761 6.06522 4.33696 6.06522L6.21196 7.94022L10.3043 3.84783C10.4837 3.84783 10.5815 3.84783 10.7609 3.84783L12.1304 5.21739C12.1467 5.39674 12.1467 5.51087 12.1467 5.69022Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="reasons__item-title">Если вас интересуют такие профессии, как:</div>
+              </div>
+              <div class="reasons__item-desc">
+                Мастер по ремонту стиральных машин, холодильников и посудомоечных машин.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="reasons__item">
+              <div class="reasons__item-header">
+                <div class="reasons__item-icon">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.5 0C3.3587 0 0 3.3587 0 7.5C0 11.6413 3.3587 15 7.5 15C11.6413 15 15 11.6413 15 7.5C15 3.3587 11.6413 0 7.5 0ZM12.1467 5.69022L6.44022 11.3804C6.26087 11.3804 6.16304 11.3804 5.9837 11.3804L2.51087 7.8913C2.51087 7.71196 2.51087 7.61413 2.51087 7.43478L3.88043 6.06522C4.05978 6.06522 4.15761 6.06522 4.33696 6.06522L6.21196 7.94022L10.3043 3.84783C10.4837 3.84783 10.5815 3.84783 10.7609 3.84783L12.1304 5.21739C12.1467 5.39674 12.1467 5.51087 12.1467 5.69022Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="reasons__item-title">Ищете работу с преимуществами</div>
+              </div>
+              <div class="reasons__item-desc">
+                Работа мастера по ремонту техники предполагает сменный график, весомый доход и постоянное наличие
+                заказов.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="reasons__item">
+              <div class="reasons__item-header">
+                <div class="reasons__item-icon">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.5 0C3.3587 0 0 3.3587 0 7.5C0 11.6413 3.3587 15 7.5 15C11.6413 15 15 11.6413 15 7.5C15 3.3587 11.6413 0 7.5 0ZM12.1467 5.69022L6.44022 11.3804C6.26087 11.3804 6.16304 11.3804 5.9837 11.3804L2.51087 7.8913C2.51087 7.71196 2.51087 7.61413 2.51087 7.43478L3.88043 6.06522C4.05978 6.06522 4.15761 6.06522 4.33696 6.06522L6.21196 7.94022L10.3043 3.84783C10.4837 3.84783 10.5815 3.84783 10.7609 3.84783L12.1304 5.21739C12.1467 5.39674 12.1467 5.51087 12.1467 5.69022Z"
+                      fill="#3069FC"
+                    />
+                  </svg>
+                </div>
+                <div class="reasons__item-title">У вас нет опыта или небольшой опыт работы</div>
+              </div>
+              <div class="reasons__item-desc">
+                Наш учебный центр и преподаватели легко адаптируются под учеников с любым опытом. Даже под тех у кого
+                этот опыт вовсе отсутствует.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="faq" id="faq">
+      <div class="container">
+        <h2 class="block-title">Вопрос-ответ</h2>
+        <div class="accordion" id="faq-acc">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <div class="mb-0">
+                <div
+                  class="btn btn-link btn-block text-left"
+                  role="button"
+                  data-toggle="collapse"
+                  data-target="#collapseOne"
+                  aria-expanded="true"
+                >
+                  <div class="faq__item">
+                    <div class="faq__item-icon">
+                      <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.8407 0.489718C10.8052 -1.59742 2.62819 3.17824 0.50429 11.1731C-1.61961 19.1679 3.15917 27.3749 11.1946 29.4621L27.0177 33.6364L23.0531 27.5872C26.1327 25.6416 28.5044 22.5639 29.4956 18.7787C31.6195 10.7839 26.8407 2.57686 18.8407 0.489718ZM16.3721 16.6504V18.03H13.5402V14.0326H14.9562C16.1243 14.0326 17.0801 13.0773 17.0801 11.9102C17.0801 10.7428 16.1243 9.78749 14.9562 9.78749C13.788 9.78749 12.8323 10.7428 12.8323 11.9102H10.0004C10.0004 9.18617 12.2305 6.95754 14.9562 6.95754C17.6819 6.95754 19.9119 9.18617 19.9119 11.9102C19.9119 14.1388 18.4252 16.049 16.3721 16.6504ZM16.3367 22.2396H13.5048V19.8343H16.3367V22.2396Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="faq__item-title">Как происходит оплата?</div>
+                    <div class="faq__item-arrow">
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.12988 11L12.6163 21.4864L23.1027 11" stroke="#B3C0C7" stroke-width="6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faq-acc">
+              <div class="card-body">
+                Оплата производится в начале курса удобным для вас способом. Плата взимается сразу после заключения
+                договора с нашим учебным центром. В договоре указаны основные дисциплины, а также количество часов
+                теории и практики.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <div class="mb-0">
+                <div
+                  class="btn btn-link btn-block text-left collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  data-target="#collapseTwo"
+                  aria-expanded="true"
+                >
+                  <div class="faq__item">
+                    <div class="faq__item-icon">
+                      <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.8407 0.489718C10.8052 -1.59742 2.62819 3.17824 0.50429 11.1731C-1.61961 19.1679 3.15917 27.3749 11.1946 29.4621L27.0177 33.6364L23.0531 27.5872C26.1327 25.6416 28.5044 22.5639 29.4956 18.7787C31.6195 10.7839 26.8407 2.57686 18.8407 0.489718ZM16.3721 16.6504V18.03H13.5402V14.0326H14.9562C16.1243 14.0326 17.0801 13.0773 17.0801 11.9102C17.0801 10.7428 16.1243 9.78749 14.9562 9.78749C13.788 9.78749 12.8323 10.7428 12.8323 11.9102H10.0004C10.0004 9.18617 12.2305 6.95754 14.9562 6.95754C17.6819 6.95754 19.9119 9.18617 19.9119 11.9102C19.9119 14.1388 18.4252 16.049 16.3721 16.6504ZM16.3367 22.2396H13.5048V19.8343H16.3367V22.2396Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="faq__item-title">Как записаться на курс?</div>
+                    <div class="faq__item-arrow">
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.12988 11L12.6163 21.4864L23.1027 11" stroke="#B3C0C7" stroke-width="6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faq-acc">
+              <div class="card-body">
+                Это несложно. Ваша задача — обратиться напрямую в учебный центр, позвонить нам или связаться онлайн. Мы
+                обсудим детали обучения и проконсультируем по дальнейшим вопросам. В том числе и по вопросам, связанным
+                с началом обучения.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <div class="mb-0">
+                <div
+                  class="btn btn-link btn-block text-left collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  data-target="#collapseThree"
+                  aria-expanded="true"
+                >
+                  <div class="faq__item">
+                    <div class="faq__item-icon">
+                      <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.8407 0.489718C10.8052 -1.59742 2.62819 3.17824 0.50429 11.1731C-1.61961 19.1679 3.15917 27.3749 11.1946 29.4621L27.0177 33.6364L23.0531 27.5872C26.1327 25.6416 28.5044 22.5639 29.4956 18.7787C31.6195 10.7839 26.8407 2.57686 18.8407 0.489718ZM16.3721 16.6504V18.03H13.5402V14.0326H14.9562C16.1243 14.0326 17.0801 13.0773 17.0801 11.9102C17.0801 10.7428 16.1243 9.78749 14.9562 9.78749C13.788 9.78749 12.8323 10.7428 12.8323 11.9102H10.0004C10.0004 9.18617 12.2305 6.95754 14.9562 6.95754C17.6819 6.95754 19.9119 9.18617 19.9119 11.9102C19.9119 14.1388 18.4252 16.049 16.3721 16.6504ZM16.3367 22.2396H13.5048V19.8343H16.3367V22.2396Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="faq__item-title">Что я получу после курсов</div>
+                    <div class="faq__item-arrow">
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.12988 11L12.6163 21.4864L23.1027 11" stroke="#B3C0C7" stroke-width="6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq-acc">
+              <div class="card-body">
+                В неосязаемом плане — бесценный опыт и профессиональные навыки по ремонту бытовой техники, которые
+                больше нигде не получится освоить за такой короткий срок. В осязаемом — диплом, подтверждающий
+                обретенную квалификацию.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFour">
+              <div class="mb-0">
+                <div
+                  class="btn btn-link btn-block text-left collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  data-target="#collapseFour"
+                  aria-expanded="true"
+                >
+                  <div class="faq__item">
+                    <div class="faq__item-icon">
+                      <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.8407 0.489718C10.8052 -1.59742 2.62819 3.17824 0.50429 11.1731C-1.61961 19.1679 3.15917 27.3749 11.1946 29.4621L27.0177 33.6364L23.0531 27.5872C26.1327 25.6416 28.5044 22.5639 29.4956 18.7787C31.6195 10.7839 26.8407 2.57686 18.8407 0.489718ZM16.3721 16.6504V18.03H13.5402V14.0326H14.9562C16.1243 14.0326 17.0801 13.0773 17.0801 11.9102C17.0801 10.7428 16.1243 9.78749 14.9562 9.78749C13.788 9.78749 12.8323 10.7428 12.8323 11.9102H10.0004C10.0004 9.18617 12.2305 6.95754 14.9562 6.95754C17.6819 6.95754 19.9119 9.18617 19.9119 11.9102C19.9119 14.1388 18.4252 16.049 16.3721 16.6504ZM16.3367 22.2396H13.5048V19.8343H16.3367V22.2396Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="faq__item-title">Я уже работаю, что вы можете предложить?</div>
+                    <div class="faq__item-arrow">
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.12988 11L12.6163 21.4864L23.1027 11" stroke="#B3C0C7" stroke-width="6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq-acc">
+              <div class="card-body">
+                Работаете в сфере ремонта? Поможем повысить квалификацию и обрести новые навыки. Работаете в каком-то
+                ином направлении? С нуля научим ремонту и расширим диапазон ваших возможностей, подарив новую прибыльную
+                специальность.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingFive">
+              <div class="mb-0">
+                <div
+                  class="btn btn-link btn-block text-left collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  data-target="#collapseFive"
+                  aria-expanded="true"
+                >
+                  <div class="faq__item">
+                    <div class="faq__item-icon">
+                      <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.8407 0.489718C10.8052 -1.59742 2.62819 3.17824 0.50429 11.1731C-1.61961 19.1679 3.15917 27.3749 11.1946 29.4621L27.0177 33.6364L23.0531 27.5872C26.1327 25.6416 28.5044 22.5639 29.4956 18.7787C31.6195 10.7839 26.8407 2.57686 18.8407 0.489718ZM16.3721 16.6504V18.03H13.5402V14.0326H14.9562C16.1243 14.0326 17.0801 13.0773 17.0801 11.9102C17.0801 10.7428 16.1243 9.78749 14.9562 9.78749C13.788 9.78749 12.8323 10.7428 12.8323 11.9102H10.0004C10.0004 9.18617 12.2305 6.95754 14.9562 6.95754C17.6819 6.95754 19.9119 9.18617 19.9119 11.9102C19.9119 14.1388 18.4252 16.049 16.3721 16.6504ZM16.3367 22.2396H13.5048V19.8343H16.3367V22.2396Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="faq__item-title">Как проходит обучение?</div>
+                    <div class="faq__item-arrow">
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.12988 11L12.6163 21.4864L23.1027 11" stroke="#B3C0C7" stroke-width="6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faq-acc">
+              <div class="card-body">
+                В зависимости от того, что вы хотите получить от обучения в нашем центре, вы можете посещать нас в
+                разное время. Но в любом случае большая часть занятий проходит при личной встрече с большим количеством
+                практики в наших специально оборудованных центрах.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header" id="headingSix">
+              <div class="mb-0">
+                <div
+                  class="btn btn-link btn-block text-left collapsed"
+                  role="button"
+                  data-toggle="collapse"
+                  data-target="#collapseSix"
+                  aria-expanded="true"
+                >
+                  <div class="faq__item">
+                    <div class="faq__item-icon">
+                      <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.8407 0.489718C10.8052 -1.59742 2.62819 3.17824 0.50429 11.1731C-1.61961 19.1679 3.15917 27.3749 11.1946 29.4621L27.0177 33.6364L23.0531 27.5872C26.1327 25.6416 28.5044 22.5639 29.4956 18.7787C31.6195 10.7839 26.8407 2.57686 18.8407 0.489718ZM16.3721 16.6504V18.03H13.5402V14.0326H14.9562C16.1243 14.0326 17.0801 13.0773 17.0801 11.9102C17.0801 10.7428 16.1243 9.78749 14.9562 9.78749C13.788 9.78749 12.8323 10.7428 12.8323 11.9102H10.0004C10.0004 9.18617 12.2305 6.95754 14.9562 6.95754C17.6819 6.95754 19.9119 9.18617 19.9119 11.9102C19.9119 14.1388 18.4252 16.049 16.3721 16.6504ZM16.3367 22.2396H13.5048V19.8343H16.3367V22.2396Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="faq__item-title">После курсов вы меня устроите на работу?</div>
+                    <div class="faq__item-arrow">
+                      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.12988 11L12.6163 21.4864L23.1027 11" stroke="#B3C0C7" stroke-width="6" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faq-acc">
+              <div class="card-body">
+                Если вы успешно сдали итоговый экзамен в нашем центре, но не подыскали себе другого места, то мы
+                пригласим вас на работу в один из своих сервисных центров. Там вы обретете дополнительный опыт, как
+                следует попрактикуетесь и, возможно, станете частью команды мастеров на постоянной основе.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hurry">
+      <div class="container">
+        <div class="hurry__wrap">
+          <h2 class="block-title">Успейте записаться</h2>
+          <div class="hurry__discount">
+            <div class="hurry__discount-icon">
+              <svg width="170" height="171" viewBox="0 0 170 171" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M133.722 45.9672L162.841 47.5672L144.829 74.6672L164.942 85.5672L144.829 96.4672L162.841 123.567L133.722 125.167L139.326 150.867L112.709 140.367L102.803 169.567L84.992 148.767L67.0808 169.567L57.1746 140.367L30.558 150.867L36.1615 125.167L7.04327 123.567L25.0545 96.4672L4.94196 85.5672L25.0545 74.6672L7.04327 47.5672L36.1615 45.9672L30.558 20.2672L57.1746 30.6672L67.0808 1.56715L84.992 22.3672L102.803 1.56715L112.709 30.6672L139.326 20.2672L133.722 45.9672Z"
+                  fill="#3069FC"
+                />
+                <path
+                  d="M147.771 85.1094L169.511 104.546L138.519 114.46L147.418 135.535L124.903 131.485L122.042 163.898L98.3032 146.961L86.6273 170.531L72.3992 145.707L46.4249 162.323L45.5068 134.955L18.5275 140.011L29.0293 111.02L1.68479 102.596L22.1129 86.025L0.372314 66.5884L31.3647 56.6744L22.4658 35.5998L44.9808 39.6496L47.8413 7.23615L71.5805 24.1736L83.2565 0.603271L97.547 25.3497L123.459 8.81135L124.455 36.2423L151.356 31.1232L140.917 60.0362L168.199 68.5389L147.771 85.1094Z"
+                  fill="#3069FC"
+                />
+              </svg>
+            </div>
+            <div class="hurry__discount-title">скидка <span>60%</span> на курсы</div>
+          </div>
+          <div class="hurry__timer">
+            <div class="hurry__timer-title">До конца акции</div>
+            <div id="countdown-third"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="hurry__programs">
+            <div class="hurry__programs-item">
+              <div class="hurry__programs-item-title">Мастер ремонта стиральных и посудомоечных машин</div>
+              <div class="hurry__programs-item-pricing">
+                <div class="hurry__programs-item-pricing-old">12 000 ₽</div>
+                <div class="hurry__programs-item-pricing-economy">Экономия 7 000 ₽</div>
+                <div class="hurry__programs-item-pricing-current">5 000 ₽</div>
+              </div>
+            </div>
+            <div class="hurry__programs-item">
+              <div class="hurry__programs-item-title">Мастер ремонта холодильников</div>
+              <div class="hurry__programs-item-pricing">
+                <div class="hurry__programs-item-pricing-old">14 000 ₽</div>
+                <div class="hurry__programs-item-pricing-economy">Экономия 8 000 ₽</div>
+                <div class="hurry__programs-item-pricing-current">6 000 ₽</div>
+              </div>
+            </div>
+          </div>
+          <form class="hurry__form">
+            <div class="form-offer">Запишитесь и получите высокооплачиваемую профессию рядом с домом</div>
+            <span><input type="hidden" name="formname" value="Успейте записаться" /> </span
+            ><span class="form-control-wrap"
+              ><input class="form-control" placeholder="Ваше имя" name="fullname" /> </span
+            ><span class="form-control-wrap"
+              ><input
+                type="tel"
+                class="form-control mask-phone"
+                placeholder="Ваш телефон"
+                name="phone"
+                required
+              /> </span
+            ><button type="submit" class="btn btn-white">Записаться на обучение</button>
+            <small class="form-text"
+              >Нажимая кнопку “Записаться на обучение” Вы соглашаетесь на обработку персональных данных.</small
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="contacts" id="contacts">
+      <div class="container">
+        <div class="row">
+          <div class="contacts__map" id="map"></div>
+          <div class="contacts__wrap">
+            <div class="contacts__item">
+              <div class="contacts__item-title">Принимаем звонки с 9:00 до 20:00</div>
+              <a href="tel:+71111111111" class="contacts__item-desc">+71111111111</a>
+              <div class="contacts__item-additional">Работаем без выходных</div>
+            </div>
+            <div class="contacts__item">
+              <div class="contacts__item-title">Занятия проходят</div>
+              <div class="contacts__item-desc">10:00 до 17:00 пн-пт</div>
+            </div>
+            <div class="contacts__item">
+              <div class="contacts__item-title">Наш адрес</div>
+              <div class="contacts__item-desc">просп. Длинноназванный, д.122к3, лит. А, эт. 9, оф. 312</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="footer">
+      <section class="container">
+        <nav class="navigation navigation--static">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-lg-auto col-md-5 col-12">
+              <p class="footer__offer">Цены указанные на сайте не являются публичной офертой</p>
+            </div>
+            <div class="col-lg-auto col-md-5 text-right text-lg-left"></div>
+            <div class="col-md-auto col-12 text-center">
+              <a href="#header" class="footer__to-top"
+                ><svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 15L13.4864 4.51361L23.9728 15" stroke="white" stroke-width="6" /></svg
+              ></a>
+            </div>
+          </div>
+        </nav>
+      </section>
+    </section>
+    <script src="./assets/js/1.script.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
